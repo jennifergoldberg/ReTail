@@ -59,27 +59,27 @@ ReTail is an application build for dog lovers with the goal of keeping rescue do
 
 ## Login and SignUp
 
-![reTail.png](ReTail%209619eaa6310e4dc99f771be6de072a97/reTail.png)
+![reTail.png](./readme_img/ReTail%209619eaa6310e4dc99f771be6de072a97/reTail.png)
 
 ## Profile and Posts
 
-![retail profiles.png](ReTail%209619eaa6310e4dc99f771be6de072a97/retail_profiles.png)
+![retail profiles.png](./readme_img/ReTail%209619eaa6310e4dc99f771be6de072a97/retail_profiles.png)
 
 # Inspiration
 
-![Screen Shot 2021-09-07 at 1.19.41 PM.png](ReTail%209619eaa6310e4dc99f771be6de072a97/Screen_Shot_2021-09-07_at_1.19.41_PM.png)
+![Screen Shot 2021-09-07 at 1.19.41 PM.png](./readme_img/ReTail%209619eaa6310e4dc99f771be6de072a97/Screen_Shot_2021-09-07_at_1.19.41_PM.png)
 
-![Screen Shot 2021-09-07 at 1.18.30 PM.png](ReTail%209619eaa6310e4dc99f771be6de072a97/Screen_Shot_2021-09-07_at_1.18.30_PM.png)
+![Screen Shot 2021-09-07 at 1.18.30 PM.png](./readme_img/ReTail%209619eaa6310e4dc99f771be6de072a97/Screen_Shot_2021-09-07_at_1.18.30_PM.png)
 
-![Screen Shot 2021-09-07 at 1.20.07 PM.png](ReTail%209619eaa6310e4dc99f771be6de072a97/Screen_Shot_2021-09-07_at_1.20.07_PM.png)
+![Screen Shot 2021-09-07 at 1.20.07 PM.png](./readme_img/ReTail%209619eaa6310e4dc99f771be6de072a97/Screen_Shot_2021-09-07_at_1.20.07_PM.png)
 
-![Screen Shot 2021-09-07 at 1.18.54 PM.png](ReTail%209619eaa6310e4dc99f771be6de072a97/Screen_Shot_2021-09-07_at_1.18.54_PM.png)
+![Screen Shot 2021-09-07 at 1.18.54 PM.png](./readme_img/ReTail%209619eaa6310e4dc99f771be6de072a97/Screen_Shot_2021-09-07_at_1.18.54_PM.png)
 
 # Data Models
 
 ## ERD
 
-![erd.png](ReTail%209619eaa6310e4dc99f771be6de072a97/erd.png)
+![erd.png](./readme_img/ReTail%209619eaa6310e4dc99f771be6de072a97/erd.png)
 
 ## Models
 
