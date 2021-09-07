@@ -69,7 +69,7 @@ ReTail is an application build for dog lovers with the goal of keeping rescue do
 
 ![Screen Shot 2021-09-07 at 1.18.30 PM.png](readme_img/Screen_Shot_2021-09-07_at_1.18.30_PM.png)
 
-![Screen Shot 2021-09-07 at 1.18.30 PM.png](./readme_img/ReTail%209619eaa6310e4dc99f771be6de072a97/Screen_Shot_2021-09-07_at_1.18.30_PM.png)
+![Screen_Shot_2021-09-07_at_1.18.54_PM.png](readme_img/Screen_Shot_2021-09-07_at_1.18.54_PM.png)
 
 ![Screen Shot 2021-09-07 at 1.20.07 PM.png](./readme_img/ReTail%209619eaa6310e4dc99f771be6de072a97/Screen_Shot_2021-09-07_at_1.20.07_PM.png)
 
