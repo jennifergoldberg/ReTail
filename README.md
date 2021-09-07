@@ -59,27 +59,27 @@ ReTail is an application build for dog lovers with the goal of keeping rescue do
 
 ## Login and SignUp
 
-![reTail.png](/readme_img/ReTail%209619eaa6310e4dc99f771be6de072a97/reTail.png)
+![reTail.png](readme_img/reTail.png)
 
 ## Profile and Posts
 
-![retail profiles.png](/readme_img/ReTail%209619eaa6310e4dc99f771be6de072a97/retail_profiles.png)
+![retail profiles.png](readme_img/retail_profiles.png)
 
 # Inspiration
 
-![Screen Shot 2021-09-07 at 1.19.41 PM.png](/readme_img/ReTail%209619eaa6310e4dc99f771be6de072a97/Screen_Shot_2021-09-07_at_1.19.41_PM.png)
+![Inspo_One.png](readme_img/Inspo_One.png)
 
-![Screen Shot 2021-09-07 at 1.18.30 PM.png](./readme_img/ReTail%209619eaa6310e4dc99f771be6de072a97/Screen_Shot_2021-09-07_at_1.18.30_PM.png)
+![Inspo_Two.png](readme_img/Inspo_Two.png)
 
-![Screen Shot 2021-09-07 at 1.20.07 PM.png](./readme_img/ReTail%209619eaa6310e4dc99f771be6de072a97/Screen_Shot_2021-09-07_at_1.20.07_PM.png)
+![Inspo_Thre.png](readme_img/Inspo_Thre.png)
 
-![Screen Shot 2021-09-07 at 1.18.54 PM.png](./readme_img/ReTail%209619eaa6310e4dc99f771be6de072a97/Screen_Shot_2021-09-07_at_1.18.54_PM.png)
+![Inspo_Four.png](readme_img/Inspo_Four.png)
 
 # Data Models
 
 ## ERD
 
-![erd.png](./readme_img/ReTail%209619eaa6310e4dc99f771be6de072a97/erd.png)
+![erd.png](readme_img/erd.png)
 
 ## Models
 
@@ -117,42 +117,6 @@ class Post(Model):
   health_choices = choices.field
   active_choices = choices.field
   available = BooleanField(default=False, blank=False)
-
-model User {
-  email    String    @unique
-  name     String?   @default("Friend")
-  user_id  Int       @id @default(autoincrement())
-  Post_Post_authorToUser      Post[] @relation("Post_authorToUser")
-  // Post_Post_favoritedByToUser Post[] @relation("Post_favoritedByToUser")
-  profile  profile
-}
-
-model Profile {
-  bio        String?
-	name       String?
-  location   String?
-  profile_id Int     @id @default(autoincrement())
-  user_id    Int     @unique
-  user      User   @relation(fields: [user_id], references: [user_id])
-}
-
-model Post {
-  id         Int        @id @default(autoincrement())
-  createdAt  DateTime   @default(now())
-  user       User   @relation(fields: [author_id], references: [user_id])
-  // favoritedBy User @relation("Post_favoritedByToUser", references: [user_id])
-  title      String @db.VarChar(250)
-  name       String
-  bio        String @db.VarChar(15000)
-  friendly   Boolean @default(false)
-  kids       Boolean @default(false)
-  age        String
-  breed      String
-  size       String
-  health     String
-  active     Boolean @default(false)
-  available  Boolean @default(false)
- }
 ```
 
 # Routes
