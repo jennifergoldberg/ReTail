@@ -59,7 +59,7 @@ ReTail is an application build for dog lovers with the goal of keeping rescue do
 
 ## Login and SignUp
 
-![reTail.png](./readme_img/ReTail%209619eaa6310e4dc99f771be6de072a97/reTail.png)
+![reTail.png](readme_img/reTail.png)
 
 ## Profile and Posts
 
