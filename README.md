@@ -153,7 +153,3 @@ class Post(Model):
 - Testing
 - Feature Creeps
 
-# Feasibility Study
-
-- Prisma
-- Filepond
