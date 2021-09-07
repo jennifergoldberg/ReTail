@@ -63,7 +63,7 @@ ReTail is an application build for dog lovers with the goal of keeping rescue do
 
 ## Profile and Posts
 
-![retail profiles.png](./readme_img/ReTail%209619eaa6310e4dc99f771be6de072a97/retail_profiles.png)
+![retail profiles.png](readme_img/retail_profiles.png)
 
 # Inspiration
 
