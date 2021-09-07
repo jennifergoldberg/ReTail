@@ -1,4 +1,3 @@
-![erd](https://user-images.githubusercontent.com/85966230/132399542-10feba45-2f4e-45ac-bd24-3c8825679432.png)
 # ReTail
 
 # Scope
@@ -80,7 +79,7 @@ ReTail is an application build for dog lovers with the goal of keeping rescue do
 
 ## ERD
 
-![erd.png](/readme_img/ReTail%209619eaa6310e4dc99f771be6de072a97/erd.png)
+![erd](https://user-images.githubusercontent.com/85966230/132399542-10feba45-2f4e-45ac-bd24-3c8825679432.png)
 
 
 ## Models
