@@ -21,9 +21,11 @@ class Profile(Model):
 
 class Post(Model):
   user = models.ForeignKey(User, on_delete=CASCADE, related_name='post')
-  title = TextField(max_length=500, blank=False)
+  dog_name = TextField(max_length=500, blank=False)
   image = TextField(max_length=500, blank=False)
-  content = TextField(max_length=2500, blank=False)
+  image_two = TextField(max_length=500, blank=True)
+  image_three = TextField(max_length=500, blank=True)
+  bio = TextField(max_length=2500, blank=False)
   color = TextField(max_length=500, blank=True)
   gender = TextField(max_length=500, blank=True)
   friendly = TextField(max_length=500, blank=True)
@@ -38,7 +40,7 @@ class Post(Model):
   created_at = DateTimeField(auto_now=False, auto_now_add=False)
 
   def __str__(self):
-    return self.title
+    return self.dog_name
 
   class Meta: 
     ordering = ['created_at']
