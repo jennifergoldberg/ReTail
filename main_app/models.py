@@ -1,7 +1,7 @@
 from django.db import models
 from django.db.models.base import Model
 from django.db.models.deletion import CASCADE
-from django.db.models.fields import CharField, DateTimeField, TextField, BooleanField
+from django.db.models.fields import DateTimeField, TextField, BooleanField
 from django.contrib.auth.models import User
 
 # Create your models here.
