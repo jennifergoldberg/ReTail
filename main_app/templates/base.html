@@ -1,3 +1,4 @@
+{% block raw %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -9,10 +10,19 @@
   <title>ReTail</title>
 
   <link rel="stylesheet" href="{%  static 'styles/main.css' %}"/>
+
+  {% load compress %}
+
+  {% compress css %}
+  <link rel="stylesheet" type="text/x-scss" href="{%  static 'styles/main.scss' %}" />
+  {% endcompress %}
+
+
   <script src="{% static 'scripts/main.js' %}" defer></script>
 
 </head>
 <body>
-  
+{% block content %}{% endblock content %}
 </body>
 </html>
+{% endblock %}
