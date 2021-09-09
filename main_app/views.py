@@ -27,3 +27,8 @@ class Signup(View):
         signup_profile_form = ProfileCreationForm()
         context = {"signup_form": signup_form, "signup_profile_form": signup_profile_form}
         return render(request, 'registration/signup.html', context)
+    # def post(request):
+    #     if request.method == 'POST':
+    #         signup_form = UserCreationForm()
+    #         signup_profile_form = ProfileCreationForm()
+    #     if signup_form.is_valid():
