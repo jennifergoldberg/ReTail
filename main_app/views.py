@@ -32,3 +32,11 @@ class Signup(View):
     #         signup_form = UserCreationForm()
     #         signup_profile_form = ProfileCreationForm()
     #     if signup_form.is_valid():
+
+
+class ProfileView(TemplateView):
+    template_name = 'profile_view.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
