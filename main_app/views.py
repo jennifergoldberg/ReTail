@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView, View
+from django.views.generic import DetailView
 
 from django.contrib.auth.forms import UserCreationForm
 from .forms import ProfileCreationForm
+from .models import User, Post, Comment
 
 # Create your views here.
 
@@ -36,6 +38,14 @@ class Signup(View):
 
 class ProfileView(TemplateView):
     template_name = 'profile_view.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+class DogDetail(DetailView):
+    model = Post
+    template_name = 'dog_detail.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
