@@ -8,7 +8,7 @@ from django.contrib.auth import login
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.forms import UserCreationForm
 from .forms import NewUserCreationForm, ProfileCreationForm
-from .models import User, Post, Comment
+from .models import User, Post, Comment, Profile
 
 # Create your views here.
 
@@ -35,13 +35,15 @@ class Signup(View):
     def post(self, request):
             signup_user_form = NewUserCreationForm(request.POST)
             signup_profile_form = ProfileCreationForm(request.POST)
-            if signup_user_form.is_valid() and signup_profile_form.is_valid():
+            if signup_user_form.is_valid():
                 user = signup_user_form.save()
-                profile = signup_profile_form.save()
+                profile = Profile(user=user)
                 # assign user to profile
-                profile.user = user
+                # profile.user = user
                 profile.save()
-                return redirect('registration/login.html')
+                print(f"==== {profile} ===")
+                login(request, user)
+                return redirect('profile_view')
             else:
                 context = {"signup_user_form": signup_user_form, "signup_profile_form": signup_profile_form}
                 return render(request, 'registration/signup.html', context)
