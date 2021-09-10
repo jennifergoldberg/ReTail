@@ -1,0 +1,24 @@
+/* line 3, main_app/static/sass/main.scss */
+body {
+  background-color: #f1f2f6; }
+
+/* line 7, main_app/static/sass/main.scss */
+main {
+  background-color: #27187e; }
+  /* line 9, main_app/static/sass/main.scss */
+  main .card_container {
+    width: 100px; }
+    /* line 12, main_app/static/sass/main.scss */
+    main .card_container img {
+      width: 90px; }
+    /* line 16, main_app/static/sass/main.scss */
+    main .card_container h3 {
+      color: #aeb8fe; }
+    /* line 20, main_app/static/sass/main.scss */
+    main .card_container li {
+      color: #f1f2f6; }
+
+/* line 26, main_app/static/sass/main.scss */
+footer {
+  color: #272d2d;
+  height: 100px; }

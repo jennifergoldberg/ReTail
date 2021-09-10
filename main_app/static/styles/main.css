@@ -1,4 +1,17 @@
 body {
+  min-height: 100vh;
+}
+
+footer {
+  background-color: #272d2d;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 50px;
+  width: 100%;
+}
+
+body {
   background-color: #f1f2f6;
 }
 
