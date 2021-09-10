@@ -2,4 +2,20 @@ body {
   background-color: #f1f2f6;
 }
 
+main {
+  background-color: #27187e;
+}
+main .card_container {
+  width: 100px;
+}
+main .card_container img {
+  width: 90px;
+}
+main .card_container h3 {
+  color: #aeb8fe;
+}
+main .card_container li {
+  color: #f1f2f6;
+}
+
 /*# sourceMappingURL=main.css.map */

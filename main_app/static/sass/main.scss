@@ -4,3 +4,21 @@ body{
   background-color: $primary-white;
 }
 
+main{
+  background-color: $color-primary;
+  .card_container {
+    width: 100px;
+
+    img {
+      width: 90px;
+    }
+
+    h3 {
+      color: $color-neutral;
+    }
+
+    li {
+      color: $primary-white;
+    }
+  }
+}

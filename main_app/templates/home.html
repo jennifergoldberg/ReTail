@@ -2,8 +2,37 @@
 {% block title %} - Home{% endblock title %}
 
 {% block content %}
-
+<header>
 <h1>HOOOOOOOOME</h1>
+
+
+
+</header>
+
+<main>
+{% for post in posts %}
+<div class="card_container">
+
+  <img src="{{ post.image }}" alt="dog">
+  <h3>{{ post.dog_name }}</h3>
+  <ul>
+  <li>{{ post.breed }}</li>
+  <li>{{ post.age }}</li>
+  <li>{{ post.size }}</li>
+  </ul>
+
+
+
+</div>
+{% endfor %}
+
+
+</main>
+
+<footer>
+
+
+</footer>
 
 
 {% endblock %}
