@@ -5,6 +5,7 @@ from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from django.contrib.auth import login
+from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.forms import UserCreationForm
 from .forms import ProfileCreationForm
 from .models import User, Post, Comment
@@ -31,10 +32,9 @@ class Signup(View):
         signup_profile_form = ProfileCreationForm()
         context = {"signup_form": signup_form, "signup_profile_form": signup_profile_form}
         return render(request, 'registration/signup.html', context)
-    def post(request):
-        if request.method == 'POST':
-            signup_form = UserCreationForm()
-            signup_profile_form = ProfileCreationForm()
+def post(request):
+        signup_form = UserCreationForm(request.POST)
+        signup_profile_form = ProfileCreationForm()
         if signup_form.is_valid():
             user = signup_form.save()
             profile = signup_profile_form.save()
@@ -47,7 +47,10 @@ class Signup(View):
             context = {"signup_form": signup_form, "signup_profile_form": signup_profile_form}
             return render(request, 'registration/signup.html', context)
 
-
+class Login(LoginView):
+    def get_success_url(self):
+        url = self.get_redirect_url()
+        return url('profile_view', kwargs={'pk': self.request.user.pk})
 
 class ProfileView(TemplateView):
     template_name = 'profile_view.html'
