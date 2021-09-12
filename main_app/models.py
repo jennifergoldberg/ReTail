@@ -37,7 +37,7 @@ class Post(Model):
   active = CharField(max_length=200, blank=True)
   house_trained = BooleanField(default=False, blank=True)
   available = BooleanField(default=False, blank=False)
-  created_at = DateTimeField(auto_now=False, auto_now_add=False)
+  created_at = DateTimeField(auto_now_add=True)
 
   def __str__(self):
     return self.dog_name
@@ -50,7 +50,7 @@ class Comment(Model):
   user = models.ForeignKey(User, on_delete=CASCADE, related_name='comment')
   post = models.ForeignKey(Post, on_delete=CASCADE, related_name='comment')
   content = TextField(max_length=1000)
-  created_at = DateTimeField(auto_now=False, auto_now_add=False)
+  created_at = DateTimeField(auto_now_add=True)
 
   def __str__(self):
     return self.title
