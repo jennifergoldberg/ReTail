@@ -1,4 +1,5 @@
 from django.shortcuts import redirect, render
+from django.urls import reverse
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView, View
 from django.views.generic import DetailView
@@ -21,8 +22,9 @@ class Home(TemplateView):
         context['posts'] = Post.objects.all
         return context
 
-class DogView(TemplateView):
-    template_name = 'dogs_view.html'
+class PostView(TemplateView):
+    template_name = 'posts_view.html'
+    model = Post
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -93,10 +95,22 @@ class ProfileView(TemplateView):
         context = super().get_context_data(**kwargs)
         return context
 
-class DogDetail(DetailView):
+class PostDetail(DetailView):
     model = Post
-    template_name = 'dog_detail.html'
+    template_name = 'post_detail.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return context
+
+class PostCreate(CreateView):
+    template_name = 'post_create.html'
+    model = Post
+    fields = ['dog_name', 'image', 'image_two', 'image_three', 'bio', 'color', 'gender', 'friendly', 'kids', 'age', 'breed', 'size', 'health', 'active', 'house_trained', 'available']
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(PostCreate, self).form_valid(form)
+
+    def get_success_url(self):
+        return reverse('post_detail', kwargs={'pk': self.object.pk})
