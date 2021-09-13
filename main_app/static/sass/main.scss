@@ -30,11 +30,43 @@ header{
   }
 }
 
+// Posts Views Page
+.container__details {
+  h1 {
+    margin-top: 20px;
+  }
+  h4 {
+    font-size: 1em;
+  }
+}
 
 .about__blocks{
-  background-color: $color-secondary;
+  margin-top: 30px;
+  background-color: $color-neutral;
+  border-radius: 5px;
 
   h5{
-    color: $color-neutral;
+    color: $color-primary;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  p{
+    text-align: center;
+  }
+}
+
+.container_more_details {
+  h2 {
+    margin-top: 30px;
+  }
+  h3 {
+    font-size: 1.25em;
+  }
+}
+
+.container__bio {
+  h2 {
+    margin: 30px 0 10px 0;
   }
 }

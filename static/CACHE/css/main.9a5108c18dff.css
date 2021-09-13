@@ -1,0 +1,53 @@
+/* line 1, main_app/static/sass/_components.scss */
+body {
+  min-height: 150vh; }
+
+/* line 5, main_app/static/sass/_components.scss */
+footer {
+  background-color: #272d2d;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 50px;
+  width: 100%; }
+
+/* line 4, main_app/static/sass/main.scss */
+body {
+  background-color: #f1f2f6; }
+
+/* line 8, main_app/static/sass/main.scss */
+main {
+  background-color: #27187e; }
+  /* line 10, main_app/static/sass/main.scss */
+  main .card_container {
+    width: 100px; }
+    /* line 13, main_app/static/sass/main.scss */
+    main .card_container img {
+      width: 90px; }
+    /* line 17, main_app/static/sass/main.scss */
+    main .card_container h3 {
+      color: #aeb8fe; }
+    /* line 21, main_app/static/sass/main.scss */
+    main .card_container li {
+      color: #f1f2f6; }
+
+/* line 28, main_app/static/sass/main.scss */
+header img {
+  width: 100vw; }
+
+/* line 34, main_app/static/sass/main.scss */
+.container__details h1 {
+  margin-top: 20px; }
+
+/* line 43, main_app/static/sass/main.scss */
+.about__blocks {
+  background-color: #aeb8fe;
+  border-radius: 5px; }
+  /* line 47, main_app/static/sass/main.scss */
+  .about__blocks h5 {
+    color: #758bfd;
+    margin-top: 10px;
+    text-align: center; }
+  /* line 53, main_app/static/sass/main.scss */
+  .about__blocks p {
+    text-align: center; }

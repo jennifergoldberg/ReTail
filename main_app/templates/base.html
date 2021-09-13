@@ -90,3 +90,14 @@
 {% endblock %}
 
 {% comment %} sass --watch main_app/static/sass/main.scss main_app/static/styles/main.css {% endcomment %}
+
+
+{% comment %} def post(self, request):
+        if request.method == "POST":
+            searched = request.POST['searched']
+            hikes = Hike.objects.filter(name__icontains=searched)
+            users = User.objects.annotate(full_name=Concat('first_name', V(' '), 'last_name')).\
+                filter(full_name__icontains=searched)
+            return render(request, 'search.html', {'searched': searched, 'hikes': hikes, 'users': users})
+        else: 
+            return render(request, "search.html", {}) {% endcomment %}

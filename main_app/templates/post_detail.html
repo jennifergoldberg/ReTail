@@ -36,30 +36,45 @@
   </div>
 
   <div class="container__about">
-    <div class="row about__blocks">
-      <div class="col about__blocks__age">
+    <div class="row justify-content-md-center about__blocks">
+      <div class="col gx-5 about__blocks__age">
         <h5>Age</h5>
         <p>{{post.age}}</p>
       </div>
-      <div class="col about__blocks__gender">
+      <div class="col gx-5 about__blocks__gender">
         <h5>Gender</h5>
         <p>{{post.gender}}</p>
       </div>
-      <div class="col about__blocks__color">
+      <div class="col gx-5 about__blocks__color">
         <h5>Color</h5>
         <p>{{post.color}}</p>
       </div>
-      <div class="col about__blocks__size">
+      <div class="col gx-5 about__blocks__size">
         <h5>Weight</h5>
         <p>{{post.size}} lbs</p>
       </div>
     </div>
   </div>
 
-  <div class="container_details">
-  
+  <div class="container_more_details">
+
+    <h2>About {{ post.dog_name }}</h2>
+
     <h3>Good with Kids</h3>
-  
+    <p>{{ post.kids }}</p>
+
+    <h3>Health Status</h3>
+    <p>{{ post.health }}</p>
+
+    <h3>Activity Level</h3>
+    <p>{{ post.active }}</p>
+
+    <h3>House-Trained</h3>
+    {% if post.house_trained == True %}
+    <p>Yes</p>
+    {% else %}
+    <p>No</p>
+    {% endif %}
   </div>
 
   <div class="container__bio">
