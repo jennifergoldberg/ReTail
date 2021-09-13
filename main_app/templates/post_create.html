@@ -1,15 +1,14 @@
 {% extends 'base.html' %}
-{% block title %}- Create Post{% endblock title %}
+{% block title %} - Create Post{% endblock title %}
 {% load widget_tweaks %}
 
 {% block content %}
 
 <h1>Create Post</h1>
 
-<form method="post">
+{% comment %} <form method="post">
   <div class="mb-3">
-    {% csrf_token %} 
-    {{form.as_p}}
+
     <label for="dog_name" class="form-label">Dog's Name</label>
     <input type="dog_name" class="form-control" id="dog_name" aria-describedby="dog_name_help">
     <div id="dog_name_help" class="form-text">If you do not know the dog's name, that's okay! Use the name you've been calling them.</div>
@@ -23,12 +22,12 @@
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</form> {% endcomment %}
 
 <form method="post">
 
-
-
+    {% csrf_token %} 
+    {{form.as_p}}
 
   <input type="submit" value="Submit" />
 </form>

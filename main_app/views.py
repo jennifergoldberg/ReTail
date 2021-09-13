@@ -128,7 +128,8 @@ class PostUpdate(UpdateView):
 
 class PostDelete(DeleteView):
     model = Post
+    template_name = 'post_confirm_delete.html'
 
     def get_success_url(self):
         user_id = self.request.user.id
-        return reverse("profile_detail", kwargs={'pk':user_id})
+        return reverse('profile_detail', kwargs={'pk':user_id})
