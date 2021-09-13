@@ -1,0 +1,2 @@
+INSERT INTO main_app_profile(id,avatar,bio,location,org_name,verified,user_id) 
+    VALUES('4','https://www.treehugger.com/thmb/5OA_TvcE4OVedJT7OSU0i1QFOQU=/3345x3345/smart/filters:no_upscale()/hispanic-woman-playing-with-dog-519516937-9b0e93fb1eb64df4b0373a42e164aa2a.jpg','LiveForPups is a dog rescue organization located in Orlando, FL. I have been running this rescue for 31 years along with several amazing volunteers. I dedicated my life to caring for lost and unwanted dogs and finding their forever homes.','Orlando,FL', 'LiveForPups', 't', '5');
