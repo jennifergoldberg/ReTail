@@ -24,3 +24,17 @@ main{
   }
 }
 
+header{
+  img{
+    width: 100vw;
+  }
+}
+
+
+.about__blocks{
+  background-color: $color-secondary;
+
+  h5{
+    color: $color-neutral;
+  }
+}

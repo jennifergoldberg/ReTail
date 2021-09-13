@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 150vh;
 }
 
 footer {
@@ -29,6 +29,17 @@ main .card_container h3 {
 }
 main .card_container li {
   color: #f1f2f6;
+}
+
+header img {
+  width: 100vw;
+}
+
+.about__blocks {
+  background-color: #758bfd;
+}
+.about__blocks h5 {
+  color: #aeb8fe;
 }
 
 /*# sourceMappingURL=main.css.map */
