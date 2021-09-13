@@ -30,13 +30,30 @@ header{
   }
 }
 
-// Posts Views Page
+// Post View Page
+
+// .container-fluid {
+//   :hover {
+//     transform: scale(1.1);
+//   }
+// }
+
+.card-body__flex {
+  display: flex;
+  i {
+    display: flex;
+    justify-content: right;
+  }
+}
+
+// Post Detail Page
 .container__details {
   h1 {
     margin-top: 20px;
   }
   h4 {
     font-size: 1em;
+    color: $color-primary;
   }
 }
 
@@ -53,6 +70,7 @@ header{
 
   p{
     text-align: center;
+    color: $primary-white;
   }
 }
 
@@ -70,3 +88,4 @@ header{
     margin: 30px 0 10px 0;
   }
 }
+
