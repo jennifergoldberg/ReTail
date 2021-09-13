@@ -88,11 +88,14 @@ class Login(LoginView):
         url = self.get_redirect_url()
         return url('profile_view', kwargs={'pk': self.request.user.pk})
 
-class ProfileView(TemplateView):
-    template_name = 'profile_view.html'
+class ProfileDetail(DetailView):
+    template_name = 'profile_detail.html'
+    model = User
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['users'] = User.objects.all()
+        context['posts'] = Post.objects.all()
         return context
 
 class PostDetail(DetailView):
@@ -114,3 +117,18 @@ class PostCreate(CreateView):
 
     def get_success_url(self):
         return reverse('post_detail', kwargs={'pk': self.object.pk})
+
+class PostUpdate(UpdateView):
+    template_name = 'post_update.html'
+    model = Post
+    fields = ['dog_name', 'image', 'image_two', 'image_three', 'bio', 'color', 'gender', 'friendly', 'kids', 'age', 'breed', 'size', 'health', 'active', 'house_trained', 'available']
+
+    def get_success_url(self):
+        return reverse('post_detail', kwargs={'pk': self.object.pk})
+
+class PostDelete(DeleteView):
+    model = Post
+
+    def get_success_url(self):
+        user_id = self.request.user.id
+        return reverse("profile_detail", kwargs={'pk':user_id})

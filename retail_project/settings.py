@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main_app',
     'compressor',
-    # 'widget-tweaks',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -127,6 +127,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+# Configuration for Sass
+
 COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'django_libsass.SassCompiler'),
 )
@@ -144,6 +146,8 @@ STATICFILES_FINDERS = [
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+# Redirects
 
 LOGIN_REDIRECT_URL = '/'
 
