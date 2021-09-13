@@ -8,27 +8,26 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth import login
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.forms import UserCreationForm
-from .forms import NewUserCreationForm, ProfileCreationForm
+from .forms import CreateForm, NewUserCreationForm, ProfileCreationForm
 from .models import User, Post, Comment, Profile
 
 # Create your views here.
 
 class Home(TemplateView):
     template_name = 'home.html'
-    model=Post
+    model = Post
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['posts'] = Post.objects.all
+        context['posts'] = Post.objects.all()
         return context
 
 class PostView(TemplateView):
     template_name = 'posts_view.html'
-    model = Post
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['posts'] = Post.objects.all
+        context['posts'] = Post.objects.all()
         return context
 
 class Signup(View):
@@ -43,12 +42,11 @@ class Signup(View):
             if signup_user_form.is_valid():
                 user = signup_user_form.save()
                 profile = Profile(user=user)
-                # assign user to profile
                 # profile.user = user
                 profile.save()
                 print(f"==== {profile} ===")
                 login(request, user)
-                return redirect('profile_view')
+                return redirect('profile_detail')
             else:
                 context = {"signup_user_form": signup_user_form, "signup_profile_form": signup_profile_form}
                 return render(request, 'registration/signup.html', context)
@@ -110,6 +108,7 @@ class PostCreate(CreateView):
     template_name = 'post_create.html'
     model = Post
     fields = ['dog_name', 'image', 'image_two', 'image_three', 'bio', 'color', 'gender', 'friendly', 'kids', 'age', 'breed', 'size', 'health', 'active', 'house_trained', 'available']
+    form = CreateForm()
 
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -133,3 +132,11 @@ class PostDelete(DeleteView):
     def get_success_url(self):
         user_id = self.request.user.id
         return reverse('profile_detail', kwargs={'pk':user_id})
+
+class ProfileUpdate(UpdateView):
+    template_name = 'profile_update.html'
+    model = Profile
+    fields = ['avatar', 'bio', 'location', 'org_name', 'verified']
+
+    def get_success_url(self):
+        return reverse('profile_detail', kwargs={'pk': self.object.pk})

@@ -21,3 +21,12 @@ class ProfileCreationForm(ModelForm):
   class Meta: 
     model = Profile
     fields = ['location']
+
+
+GENDER_CHOICES =(
+  ("M", "Male"),
+  ("F", "Female"),
+)
+
+class CreateForm(forms.Form):
+  gender = forms.ChoiceField(widget=forms.RadioSelect, choices = GENDER_CHOICES)

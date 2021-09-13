@@ -27,7 +27,8 @@
 <form method="post">
 
     {% csrf_token %} 
-    {{form.as_p}}
+    {% comment %} {{form.as_p}} {% endcomment %}
+    {{form}}
 
   <input type="submit" value="Submit" />
 </form>
