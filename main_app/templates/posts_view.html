@@ -4,22 +4,38 @@
 
 
 <h1>dogs page</h1>
-
-<div class="card" style="width: 18rem;">
-{% for post in posts %}
-  <img src="{{ post.image }}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <div class="card-body__title">
-      <h5 class="card-title">{{ post.dog_name }}</h5>
-      <div class="card-body__icons">
-        <i id="heart" class="far fa-heart"></i>
-        <i id="comment" class="far fa-comment-alt"></i>
+<div class="card-container">
+  <div class="card" style="width: 18rem;">
+  {% for post in posts %}
+    <img src="{{ post.image }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <div class="card-body__title">
+        <h5 class="card-title">{{ post.dog_name }}</h5>
+        <div class="card-body__icons">
+          <i id="heart" class="far fa-heart"></i>
+          <i id="comment" class="far fa-comment-alt"></i>
+        </div>
       </div>
+      <p id="card-text"> {{ post.breed }} </p>
+      <div class="card-text__blocks">
+        <div class="gender">
+          <h6>Gender</h6>
+          <p>{{ post.gender }}</p>
+        </div>
+        <div class="age">
+          <h6>Age</h6>
+          <p>{{ post.age }}</p>
+        </div>
+        <div class="size">
+          <h6>Size</h6>
+          <p>{{ post.size }} lbs </p>
+        </div>
+      </div>
+      <a href="{% url 'post_detail' post.pk %}" class="btn btn-dark mt-3">Go somewhere</a>
     </div>
-    <p class="card-text">{{ post.breed }} <span> | </span> {{ post.gender }} <span> | </span>  {{ post.size }} lbs </p>
-    <a href="{% url 'post_detail' post.pk %}" class="btn btn-dark">Go somewhere</a>
+    
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
 
 {% endblock %}

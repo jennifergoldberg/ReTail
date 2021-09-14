@@ -112,6 +112,79 @@ nav.img {
   }
 }
 
+#card-text {
+  text-align: left;
+}
+
+.card-text__blocks {
+  // display: grid;
+  // grid-template-columns: 30px, 30px, 30px;
+  // grid-template-rows: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gender {
+  background-color: $color-neutral;
+  border-radius: 5px;
+  padding: 10px;
+  height: 60px;
+  width: 70px;
+
+  h6 {
+    font-size: 12px;
+    color: $color-secondary;
+    margin: 0px;
+    padding: 0px;
+  }
+  p {
+    color: $primary-white;
+    margin: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+.age {
+  background-color: $color-neutral;
+  border-radius: 5px;
+  padding: 10px;
+  height: 60px;
+  width: 70px;
+
+  h6 {
+    font-size: 12px;
+    color: $color-secondary;
+    margin: 0px;
+    padding: 0px;
+  }
+  p {
+    color: $primary-white;
+    margin: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+.size {
+  background-color: $color-neutral;
+  border-radius: 5px;
+  padding: 10px;
+  height: 60px;
+  width: 70px;
+
+  h6 {
+    font-size: 12px;
+    color: $color-secondary;
+    margin: 0px;
+    padding: 0px;
+  }
+  p {
+    color: $primary-white;
+    margin: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+
 // Post Detail Page
 .carousel-item {
   img {

@@ -43,7 +43,7 @@ class Post(Model):
     return self.dog_name
 
   class Meta: 
-    ordering = ['created_at']
+    ordering = ['-created_at']
 
 
 class Comment(Model):
@@ -56,4 +56,4 @@ class Comment(Model):
     return self.title
 
   class Meta: 
-    ordering = ['created_at']
+    ordering = ['-created_at']
