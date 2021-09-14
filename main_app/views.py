@@ -35,18 +35,17 @@ class PostView(TemplateView):
             context["dog_name"] = Post.objects.filter(dog_name__icontains=dog_name) 
         else:
             context['posts'] = Post.objects.all()
-            context['user'] = User.objects.all()
         return context
 
-    def post(self, request):
-            if request.method == "POST":
-                searched = request.POST['searched']
-                posts = Post.objects.filter(name__icontains=searched)
-                users = User.objects.annotate(full_name=Concat('first_name', V(' '), 'last_name')).\
-                    filter(full_name__icontains=searched)
-                return render(request, 'search.html', {'searched': searched, 'hikes': hikes, 'users': users})
-            else: 
-                return render(request, "search.html", {}) 
+    # def post(self, request):
+    #         if request.method == "POST":
+    #             searched = request.POST['searched']
+    #             posts = Post.objects.filter(name__icontains=searched)
+    #             users = User.objects.annotate(full_name=Concat('first_name', V(' '), 'last_name')).\
+    #                 filter(full_name__icontains=searched)
+    #             return render(request, 'search.html', {'searched': searched, 'hikes': hikes, 'users': users})
+    #         else: 
+    #             return render(request, "search.html", {}) 
 
 class Signup(View):
     def get(self, request):
