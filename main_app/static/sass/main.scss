@@ -93,14 +93,30 @@ nav.img {
 .card-body__title {
   display: flex;
   justify-content: space-between;
+
+  a {
+    :hover {
+      color: $highlight-secondary !important;
+    }
+  }
+
+  h5 {
+    color: $color-primary;
+    margin-bottom: 3px;
+
+  }
 }
 
 .card-body__icons {
   #heart {
     margin-right: 5px;
+    color: $highlight-secondary;
     :hover {
       color: $highlight-secondary;
     }
+  }
+  #comment {
+    color: $color-primary;
   }
 }
 
@@ -114,6 +130,8 @@ nav.img {
 
 #card-text {
   text-align: left;
+  color: $color-secondary;
+  margin-bottom: 25px;
 }
 
 .card-text__blocks {
