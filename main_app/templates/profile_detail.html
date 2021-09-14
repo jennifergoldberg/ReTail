@@ -1,6 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>profile</h1>
+<div class="profile_header">
+  <img src="{{ user.profile.avatar }}" alt="avatar" width="150px">
+  <div class="profile_header__details">
+    <h1>{{ user.username }}</h1>
+    <h3>{{ user.profile.location }}</h3>
+
+  </div>
+</div>
+<h3>{{ user.profile.org_name }}</h3>
+<p>{{ user.profile.bio }}</p>
+
+
+
 
 {% endblock content %}
