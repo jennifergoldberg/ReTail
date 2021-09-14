@@ -32,10 +32,17 @@ header{
 
 // Login
 .login {
+  text-align: center;
+
   h1 {
+    color: $color-primary;
+    margin: 30px;
+  }
+  h2 {
     color: $color-primary;
   }
 }
+
 .login__options {
     padding: 10px, 5px ;
     margin: 5px;
@@ -44,10 +51,16 @@ header{
 
 .login__exists__options {
   display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
 
   a {
     color: $color-neutral;
     text-decoration: none;
+  }
+  button {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.19);
   }
 }
 

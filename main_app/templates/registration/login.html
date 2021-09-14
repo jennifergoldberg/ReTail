@@ -11,14 +11,13 @@
 {% if user.is_authenticated %}
   <h2 class="login__exists">{{ user.username }} you're already logged in.</h2>
   <div class="login__exists__options">
-    <button class="btn btn-light">
       <a href="{% url 'logout' %}" style="text-decoration: none;">Logout</a>
-    </button>
     <p class="login__options"> or continue to </p>
       <button class="btn btn-light">
       <a href="{% url 'home' %}" style="text-decoration: none;">Home</a>
     </button>
   </div>
+</div>
 
   {% else %}
 
@@ -27,7 +26,7 @@
   <input type="submit" class="btn" value="login" />
   <input type="hidden" name="next" value="{{ next }}" />
 </form>
-</div>
+
 
 {% endif %}
 
@@ -43,7 +42,7 @@
       <div class="d-flex align-items-center flex-column my-4">
         {% csrf_token %} 
         <div class="input-group mb-3 px-3">
-          <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+          <span class="input-group-text" id="basic-addon1"><i class="fas fa-user-circle"></i></span>
           {{ form.username|add_class:"form-control"|attr:"placeholder:Username" }}
         </div>
         <div class="input-group mb-3 px-3">
