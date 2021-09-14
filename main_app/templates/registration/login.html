@@ -4,57 +4,40 @@
 
 
 {% block content %}
+{% if user.is_authenticated %}
 
 <div class="login">
 <h1 id="login" class="mt-5">Log In</h1>
 
-{% if user.is_authenticated %}
   <h2 class="login__exists">{{ user.username }} you're already logged in.</h2>
   <div class="login__exists__options">
-      <a href="{% url 'logout' %}" style="text-decoration: none;">Logout</a>
+    <a href="{% url 'logout' %}" style="text-decoration: none;">Logout </a>
     <p class="login__options"> or continue to </p>
-      <button class="btn btn-light">
-      <a href="{% url 'home' %}" style="text-decoration: none;">Home</a>
-    </button>
+    <a href="{% url 'home' %}" style="text-decoration: none;"> Home</a>
   </div>
 </div>
 
   {% else %}
-
-<form method="post" action="{% url 'login' %}">
-  {% csrf_token %} {{ form.as_p }}
-  <input type="submit" class="btn" value="login" />
-  <input type="hidden" name="next" value="{{ next }}" />
-</form>
-
+  <h1 id="login_header" class="mt-5">Log In</h1>
+    <div class="login_form">
+      <form class="m-3" method="post" action="{% url 'login' %}">
+        <div class="d-flex align-items-center flex-column my-4">
+          {% csrf_token %} 
+          <div class="input-group mb-3 px-3">
+            <span class="input-group-text" id="basic-addon1"><i class="fas fa-user-circle"></i></span>
+            {{ form.username|add_class:"form-control"|attr:"placeholder:Username" }}
+          </div>
+          <div class="input-group mb-3 px-3">
+            <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+            {{ form.password|add_class:"form-control"|attr:"placeholder:Password" }}
+          </div>
+          {{profile_form.as_p}}
+          <input class="px-3 py-1 btn btn-dark mt-3" style="background-color:#27187e;" type="submit" class="button" value="Log In" id="signin"/>
+          <input type="hidden" name="next" value="{{ next }}" />
+        </div>
+      </form>
+    </div>
 
 {% endif %}
 
-<h1 id="title" class='mt-5' style="text-align:center">Log In</h1>
-
-{% if user.is_authenticated %}
-    <h2 class="my-5" style="color:white;text-align:center">{{user.username}} you are already logged in. Please <a href="{% url 'logout' %}">Logout.</a></h2>
-
-{% else %}
-  <div style="height:70vh;">
-  <div class="mt-5 pt-2 pb-2" style="width:400px;margin:auto;border-radius:5px;" id="account-login">
-    <form class="m-3" method="post" action="{% url 'login' %}">
-      <div class="d-flex align-items-center flex-column my-4">
-        {% csrf_token %} 
-        <div class="input-group mb-3 px-3">
-          <span class="input-group-text" id="basic-addon1"><i class="fas fa-user-circle"></i></span>
-          {{ form.username|add_class:"form-control"|attr:"placeholder:Username" }}
-        </div>
-        <div class="input-group mb-3 px-3">
-          <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
-          {{ form.password|add_class:"form-control"|attr:"placeholder:Password" }}
-        </div>
-        {{profile_form.as_p}}
-        <input class="px-3 py-1 btn" type="submit" class="button" value="Log In" id="signin"/>
-        <input type="hidden" name="next" value="{{ next }}" />
-      </div>
-    </form>
-  </div>
-  </div>
-{% endif %}
 {% endblock %}

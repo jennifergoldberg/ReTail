@@ -31,6 +31,15 @@ header{
 }
 
 // Login
+.login_form {
+  width: 50vw;
+}
+
+#login_header {
+  color: $color-primary;
+  margin-left: 30px;
+}
+
 .login {
   text-align: center;
 
@@ -44,8 +53,8 @@ header{
 }
 
 .login__options {
-    padding: 10px, 5px ;
-    margin: 5px;
+    // padding: 10px, 5px ;
+    margin: 0 5px;
     color: $color-primary;
 }
 
@@ -54,13 +63,11 @@ header{
   justify-content: center;
   margin-top: 20px;
 
-
   a {
     color: $color-neutral;
-    text-decoration: none;
-  }
-  button {
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.19);
+      ::hover {
+        color: $color-primary;
+      }
   }
 }
 
