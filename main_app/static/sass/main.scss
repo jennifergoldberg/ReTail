@@ -29,6 +29,11 @@ header{
     width: 100vw;
   }
 }
+// Nav
+
+nav.img {
+  border-radius: 100px;
+}
 
 // Login
 .login_form {
@@ -83,6 +88,20 @@ header{
   //   box-shadow: 0 4px 8px 0 rgba(47, 133, 213, 0.194), 0 6px 20px 0 rgba(47, 133, 213, 0.194);
   // text-align: center;
   // }
+}
+
+.card-body__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-body__icons {
+  #heart {
+    margin-right: 5px;
+    :hover {
+      color: $highlight-secondary;
+    }
+  }
 }
 
 .card-body__flex {

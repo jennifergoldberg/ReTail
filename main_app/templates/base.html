@@ -42,6 +42,27 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    {% if user.is_authenticated %}
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'profile_detail' user.pk %}">
+            <img src="{{ user.profile.avatar }}" alt="avatar" height="25px" style="border-radius:100px; border: 2px solid #aeb8fe;">
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'profile_detail' user.pk %}">Hello, {{ user.username }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'posts_view' %}">Dogs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+        </li>
+      </ul>
+    {% else %}
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
@@ -55,16 +76,11 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
         </li>
-        {% comment %} <li>
-          <button class="btn me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#login-modal" id="login">Login In</button>
-        </li>
-        <li>
-          <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#sign-up-modal" id="signup">Sign Up</button>
-        </li> {% endcomment %}
       </ul>
+      {% endif %}
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-outline-dark" type="submit">Search</button>
       </form>
     </div>
   </div>
@@ -92,13 +108,3 @@
 
 {% comment %} sass --watch main_app/static/sass/main.scss main_app/static/styles/main.css {% endcomment %}
 
-
-{% comment %} def post(self, request):
-        if request.method == "POST":
-            searched = request.POST['searched']
-            hikes = Hike.objects.filter(name__icontains=searched)
-            users = User.objects.annotate(full_name=Concat('first_name', V(' '), 'last_name')).\
-                filter(full_name__icontains=searched)
-            return render(request, 'search.html', {'searched': searched, 'hikes': hikes, 'users': users})
-        else: 
-            return render(request, "search.html", {}) {% endcomment %}
