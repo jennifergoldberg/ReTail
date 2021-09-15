@@ -12,5 +12,4 @@ urlpatterns = [
   path('dogs/<int:pk>/edit/', PostUpdate.as_view(), name='post_update'),
   path('dogs/<int:pk>/delete/', PostDelete.as_view(), name='post_delete'),
   path('accounts/profile/<int:pk>/update', ProfileUpdate.as_view(), name='profile_update'),
-
 ]

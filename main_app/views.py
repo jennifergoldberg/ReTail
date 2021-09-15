@@ -111,6 +111,7 @@ class ProfileDetail(DetailView):
         context = super().get_context_data(**kwargs)
         context['users'] = User.objects.all()
         context['posts'] = Post.objects.all()
+        context['profiles'] = Profile.objects.all()
         return context
 
 class PostDetail(DetailView):
@@ -154,6 +155,15 @@ class ProfileUpdate(UpdateView):
     template_name = 'profile_update.html'
     model = Profile
     fields = ['avatar', 'bio', 'location', 'org_name', 'verified']
+    # success_url = 'home/'
+    # print(f'=={Profile}==')
+    # def get(self, request):
+    #     context = { 'user': request.user }
+
+
+    # def post(self, request):
+    #     Profile.objects.filter(user = request.user)
 
     def get_success_url(self):
+        print(f'=={self.object.pk}==')
         return reverse('profile_detail', kwargs={'pk': self.object.pk})

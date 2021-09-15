@@ -80,6 +80,18 @@ nav.img {
 
 // Post View Page
 
+.post_view {
+  margin: 30px;
+}
+
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-content: center;
+  gap: 30px;
+
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
@@ -88,6 +100,7 @@ nav.img {
   //   box-shadow: 0 4px 8px 0 rgba(47, 133, 213, 0.194), 0 6px 20px 0 rgba(47, 133, 213, 0.194);
   // text-align: center;
   // }
+  height: fit-content;
 }
 
 .card-body__title {

@@ -2,11 +2,15 @@
 
 {% block content %}
 
-
-<h1>dogs page</h1>
-<div class="card-container">
-  <div class="card" style="width: 18rem;">
+<div class="post_view">
+{% comment %} <h1>Find your Tail</h1>
+<form class="d-flex">
+  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+  <button class="btn btn-outline-dark" type="submit">Search</button>
+</form> {% endcomment %}
+<div class="card_container">
   {% for post in posts %}
+  <div class="card" style="width: 18rem;">
     <a href="{% url 'post_detail' post.pk %}">
     <img src="{{ post.image }}" class="card-img-top" alt="...">
     </a>
@@ -35,11 +39,12 @@
           <p>{{ post.size }} lbs </p>
         </div>
       </div>
-      <a href="{% url 'post_detail' post.pk %}" class="btn btn-dark mt-3">Go somewhere</a>
+      {% comment %} <a href="{% url 'post_detail' post.pk %}" class="btn btn-dark mt-3">Go somewhere</a> {% endcomment %}
     </div>
     
-    {% endfor %}
   </div>
+    {% endfor %}
 </div>
 
+</div>
 {% endblock %}

@@ -6,13 +6,16 @@
   <div class="profile_header__details">
     <h1>{{ user.username }}</h1>
     <h3>{{ user.profile.location }}</h3>
-
+    <a href="{% url 'profile_update' user.profile.pk %}"><i class="fas fa-cog"></i></a>
   </div>
 </div>
 <h3>{{ user.profile.org_name }}</h3>
 <p>{{ user.profile.bio }}</p>
 
+{% for post in user.posts.all %}
+<p>{{ post.dog_name }}</p>
 
+{% endfor %}
 
 
 {% endblock content %}
