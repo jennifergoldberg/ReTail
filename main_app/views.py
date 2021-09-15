@@ -165,5 +165,7 @@ class ProfileUpdate(UpdateView):
     #     Profile.objects.filter(user = request.user)
 
     def get_success_url(self):
-        print(f'=={self.object.pk}==')
-        return reverse('profile_detail', kwargs={'pk': self.object.pk})
+        # print(f'=={self.object.pk}==')
+        # return reverse('profile_detail', kwargs={'pk': self.object.pk})
+        user_id = self.request.user.id
+        return reverse('profile_detail', kwargs={'pk':user_id})
