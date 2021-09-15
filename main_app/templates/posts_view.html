@@ -8,9 +8,13 @@
   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
   <button class="btn btn-outline-dark" type="submit">Search</button>
 </form> {% endcomment %}
+
 <div class="add_post">
-  <a href="{% url 'post_create' %}">Add Post</a>
+  <button class="btn btn-light">
+    <a href="{% url 'post_create' %}" style="text-decoration:none;"> <i class="fas fa-paw"></i> Add Post</a> 
+  </button>
 </div>
+
 <div class="card_container">
   {% for post in posts %}
   <div class="card" style="width: 18rem;">

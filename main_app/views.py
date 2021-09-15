@@ -155,17 +155,7 @@ class ProfileUpdate(UpdateView):
     template_name = 'profile_update.html'
     model = Profile
     fields = ['avatar', 'bio', 'location', 'org_name', 'verified']
-    # success_url = 'home/'
-    # print(f'=={Profile}==')
-    # def get(self, request):
-    #     context = { 'user': request.user }
-
-
-    # def post(self, request):
-    #     Profile.objects.filter(user = request.user)
 
     def get_success_url(self):
-        # print(f'=={self.object.pk}==')
-        # return reverse('profile_detail', kwargs={'pk': self.object.pk})
         user_id = self.request.user.id
         return reverse('profile_detail', kwargs={'pk':user_id})

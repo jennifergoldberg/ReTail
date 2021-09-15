@@ -84,9 +84,22 @@ nav.img {
   margin: 30px;
 }
 
+.add_post {
+  margin-bottom: 30px;
+  a {
+    color: $color-primary;
+    :hover {
+      color: $highlight-secondary;
+    }
+  }
+  button {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
 .card_container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-content: center;
   gap: 30px;
 
@@ -160,7 +173,7 @@ nav.img {
   border-radius: 5px;
   padding: 10px;
   height: 60px;
-  width: 70px;
+  width: 80px;
 
   h6 {
     font-size: 12px;
@@ -180,7 +193,7 @@ nav.img {
   border-radius: 5px;
   padding: 10px;
   height: 60px;
-  width: 70px;
+  width: 80px;
 
   h6 {
     font-size: 12px;
@@ -200,7 +213,7 @@ nav.img {
   border-radius: 5px;
   padding: 10px;
   height: 60px;
-  width: 70px;
+  width: 80px;
 
   h6 {
     font-size: 12px;

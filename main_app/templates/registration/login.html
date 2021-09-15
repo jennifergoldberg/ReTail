@@ -31,7 +31,9 @@
             <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
             {{ form.password|add_class:"form-control"|attr:"placeholder:Password" }}
           </div>
-          {{profile_form.as_p}}
+          <div class="boolean_login">
+            <a href="{% url 'signup' %}" style="text-decoration:none; color:#758bfd">Don't have a Login? <span class="login_signup">Sign Up</span></a>
+          </div>
           <input class="px-3 py-1 btn btn-dark mt-3" style="background-color:#27187e;" type="submit" class="button" value="Log In" id="signin"/>
           <input type="hidden" name="next" value="{{ next }}" />
         </div>
