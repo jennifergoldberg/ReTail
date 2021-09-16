@@ -3,10 +3,10 @@
 
 {% block content %}
 
-  <h1 class="confirm_delete">Are you sure you want to delete {{ post.dog_name }}?</h1>
+  <h1 class="confirm_delete">Are you sure you want to take down the post for {{ post.dog_name }}?</h1>
   <form action="" method="POST">
     {% csrf_token %} {{form.as_p}}
-    <input class="btn btn-danger" type="submit" value="Delete" />
+    <input class="btn btn-danger" type="submit" value="Confirm" />
     <a class="btn btn-dark" href="{% url 'post_detail' post.pk %}">Cancel</a>
   </form>
 

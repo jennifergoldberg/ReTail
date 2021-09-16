@@ -18,33 +18,35 @@
 </div>
 
   {% else %}
-
-<div class="login_image">
-  <img src="" alt="">
-</div>
-
-
-  <h1 id="login_header" class="mt-5">Log In</h1>
-    <div class="login_form">
-      <form class="m-3" method="post" action="{% url 'login' %}">
-        <div class="d-flex align-items-center flex-column my-4">
-          {% csrf_token %} 
-          <div class="input-group mb-3 px-3">
-            <span class="input-group-text" id="basic-addon1"><i class="fas fa-user-circle"></i></span>
-            {{ form.username|add_class:"form-control"|attr:"placeholder:Username" }}
-          </div>
-          <div class="input-group mb-3 px-3">
-            <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
-            {{ form.password|add_class:"form-control"|attr:"placeholder:Password" }}
-          </div>
-          <div class="boolean_login">
-            <a href="{% url 'signup' %}" style="text-decoration:none; color:#758bfd">Don't have a Login? <span class="login_signup">Sign Up</span></a>
-          </div>
-          <input class="px-3 py-1 btn btn-dark mt-3" style="background-color:#27187e;" type="submit" class="button" value="Log In" id="signin"/>
-          <input type="hidden" name="next" value="{{ next }}" />
-        </div>
-      </form>
+  <div class="login_container">
+    <div class="login_image">
+      <img src="/static/assets/charles-deluvio-K4mSJ7kc0As-unsplash.jpg" alt="funny dog">
     </div>
+
+    <div class="login_form">
+      <h1 id="login_header" class="mt-5">Log In</h1>
+        <div class="login_form">
+          <form class="m-3" method="post" action="{% url 'login' %}">
+            <div class="d-flex align-items-center flex-column my-4">
+              {% csrf_token %} 
+              <div class="input-group mb-3 px-3">
+                <span class="input-group-text" id="basic-addon1"><i class="fas fa-user-circle"></i></span>
+                {{ form.username|add_class:"form-control"|attr:"placeholder:Username" }}
+              </div>
+              <div class="input-group mb-3 px-3">
+                <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                {{ form.password|add_class:"form-control"|attr:"placeholder:Password" }}
+              </div>
+              <div class="boolean_login">
+                <a href="{% url 'signup' %}" style="text-decoration:none; color:#758bfd">Don't have a Login? <span class="login_signup">Sign Up</span></a>
+              </div>
+              <input class="px-3 py-1 btn btn-dark mt-3" style="background-color:#27187e;" type="submit" class="button" value="Log In" id="signin"/>
+              <input type="hidden" name="next" value="{{ next }}" />
+            </div>
+          </form>
+        </div>
+    </div>
+  </div>
 
 {% endif %}
 

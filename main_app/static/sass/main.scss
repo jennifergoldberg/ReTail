@@ -6,22 +6,15 @@ body{
 }
 
 main{
-  background-color: $color-primary;
-  .home_container {
-    width: 100px;
-
-    img {
-      width: 90px;
-    }
-
-    h3 {
-      color: $color-neutral;
-    }
-
-    li {
-      color: $primary-white;
-    }
+  background-color: $primary-white;
+  h3 {
+    color: $color-primary;
   }
+
+  p {
+    color: $color-secondary;
+  }
+
 }
 
 header{
@@ -36,8 +29,15 @@ nav.img {
 }
 
 // Login
+.login_container {
+  display: flex;
+}
+.login_image img {
+  height: 100vh;
+}
+
 .login_form {
-  width: 50vw;
+  width: 30vw;
 }
 
 #login_header {

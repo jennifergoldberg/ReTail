@@ -63,7 +63,7 @@ class Signup(View):
                 profile.save()
                 print(f"==== {profile} ===")
                 login(request, user)
-                return redirect('profile_detail')
+                return redirect('login')
             else:
                 context = {"signup_user_form": signup_user_form, "signup_profile_form": signup_profile_form}
                 return render(request, 'registration/signup.html', context)

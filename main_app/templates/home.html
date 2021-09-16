@@ -10,7 +10,7 @@
 </header>
 
 <main>
-{% for post in posts %}
+{% comment %} {% for post in posts %}
 <div class="home_container">
 
   <img src="{{ post.image }}" alt="dog">
@@ -24,7 +24,17 @@
 
 
 </div>
-{% endfor %}
+{% endfor %} {% endcomment %}
+
+<h3>Looking for a Friend?</h3>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus excepturi illum necessitatibus tenetur dolore minima accusamus illo, facilis eos voluptas vel! Omnis veniam excepturi laborum nisi quos dignissimos totam officia!</p>
+
+<h3>Need to rehome a Dog?</h3>
+<p>That's okay!</p>
+
+<h3>Are you a rescue?</h3>
+<p>Great!</p>
+
 
 
 </main>

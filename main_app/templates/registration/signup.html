@@ -30,7 +30,7 @@
     </form>
 </div>
 
-{% if signup_form.errors or profile_form.errors %}
+{% comment %} {% if signup_form.errors or profile_form.errors %}
     <h5 class="alert alert-danger">{{signup_form.errors}} {{profile_form.errors}} </h5>
   {% endif %}
     <div class="mt-5" style="width:600px;margin:auto;border:3px solid #B0F3EC;border-radius:5px" id="post-card">
@@ -70,7 +70,7 @@
                 <input class="btn px-3 py-1" type="submit" value="Sign Up" id="ok-btn">    
             </div>
           </form>
-    </div>
+    </div> {% endcomment %}
 
 
 
