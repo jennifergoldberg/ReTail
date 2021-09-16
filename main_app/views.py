@@ -1,6 +1,7 @@
+from retail_project.settings import DATABASES
 from django.shortcuts import redirect, render
 from django.urls import reverse
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.views.generic.base import TemplateView, View
 from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -159,3 +160,12 @@ class ProfileUpdate(UpdateView):
     def get_success_url(self):
         user_id = self.request.user.id
         return reverse('profile_detail', kwargs={'pk':user_id})
+
+
+def error_404(request, exception):
+    data = {}
+    return render(request,'404.html', data)
+
+def error_500(request):
+    data = {}
+    return render(request,'500.html', data)
