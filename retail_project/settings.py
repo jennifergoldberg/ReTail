@@ -13,7 +13,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 import environ
 
-env = environ.Env()
+env = environ.Env(
+    DEBUG=(bool, False)
+)
 # reading .env file
 environ.Env.read_env()
 
@@ -133,9 +135,9 @@ COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'django_libsass.SassCompiler'),
 )
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "staticfiles"), 
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "staticfiles"), 
+# ]
 
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -145,7 +147,7 @@ STATICFILES_FINDERS = [
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 # Redirects
 
