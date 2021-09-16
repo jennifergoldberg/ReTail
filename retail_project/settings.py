@@ -10,8 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-import os
-import environ
+# import os
+# import environ
+from os import environ
 env = environ.Env(
     DEBUG=(bool, False)
 )
