@@ -159,3 +159,4 @@ class ProfileUpdate(UpdateView):
     def get_success_url(self):
         user_id = self.request.user.id
         return reverse('profile_detail', kwargs={'pk':user_id})
+
