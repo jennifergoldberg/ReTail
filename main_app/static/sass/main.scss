@@ -5,16 +5,15 @@ body{
   background-color: $primary-white;
 }
 
+// Home
 main{
   background-color: $primary-white;
-  h3 {
+
+
+  h4 {
     color: $color-primary;
+    margin: 30px;
   }
-
-  p {
-    color: $color-secondary;
-  }
-
 }
 
 header{
@@ -22,10 +21,30 @@ header{
     width: 100vw;
   }
 }
-// Nav
 
+.home_info {
+  display: flex;
+}
+
+.home_info__friend {
+  width: 30%;
+  margin: 30px;
+  
+  h3 {
+    color: $color-primary;
+    font-size: 20px;
+  }
+
+  p {
+    margin-top: 15px;
+    text-align: unset;
+    color: $color-secondary
+  }
+}
+
+// Nav
 nav.img {
-  border-radius: 100px;
+  border-radius: 1px;
 }
 
 // Login
@@ -285,6 +304,11 @@ nav.img {
   }
 }
 
+.container__details__edit {
+  text-align: center;
+  margin-top: 30px;
+}
+
 // Profile Detail Page
 
 .profile_img {
@@ -325,5 +349,8 @@ nav.img {
   }
   p {
     color: $color-secondary;
+    text-align: justify;
+    max-width: fit-content;
+    margin-right: 30px;
   }
 }

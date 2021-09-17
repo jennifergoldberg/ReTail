@@ -1,0 +1,306 @@
+/* line 5, main_app/static/sass/_components.scss */
+footer {
+  background-color: #272d2d;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 50px;
+  width: 100%; }
+
+/* line 4, main_app/static/sass/main.scss */
+body {
+  background-color: #f1f2f6; }
+
+/* line 9, main_app/static/sass/main.scss */
+main {
+  background-color: #f1f2f6; }
+  /* line 11, main_app/static/sass/main.scss */
+  main h3 {
+    color: #27187e; }
+
+/* line 17, main_app/static/sass/main.scss */
+header img {
+  width: 100vw; }
+
+/* line 22, main_app/static/sass/main.scss */
+.home_info {
+  display: flex; }
+
+/* line 26, main_app/static/sass/main.scss */
+.home_info__friend {
+  width: 30%;
+  margin: 30px; }
+  /* line 30, main_app/static/sass/main.scss */
+  .home_info__friend p {
+    text-align: unset;
+    color: #758bfd; }
+
+/* line 37, main_app/static/sass/main.scss */
+nav.img {
+  border-radius: 100px; }
+
+/* line 42, main_app/static/sass/main.scss */
+.login_container {
+  display: flex; }
+
+/* line 45, main_app/static/sass/main.scss */
+.login_image img {
+  height: 100vh; }
+
+/* line 49, main_app/static/sass/main.scss */
+.login_form {
+  width: 30vw; }
+
+/* line 53, main_app/static/sass/main.scss */
+#login_header {
+  color: #27187e;
+  margin-left: 30px; }
+
+/* line 58, main_app/static/sass/main.scss */
+.login {
+  text-align: center; }
+  /* line 61, main_app/static/sass/main.scss */
+  .login h1 {
+    color: #27187e;
+    margin: 30px; }
+  /* line 65, main_app/static/sass/main.scss */
+  .login h2 {
+    color: #27187e; }
+
+/* line 70, main_app/static/sass/main.scss */
+.login__options {
+  margin: 0 5px;
+  color: #27187e; }
+
+/* line 76, main_app/static/sass/main.scss */
+.login__exists__options {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; }
+  /* line 81, main_app/static/sass/main.scss */
+  .login__exists__options a {
+    color: #aeb8fe; }
+    /* line 83, main_app/static/sass/main.scss */
+    .login__exists__options a ::hover {
+      color: #27187e; }
+
+/* line 91, main_app/static/sass/main.scss */
+.signup_container {
+  display: flex; }
+
+/* line 98, main_app/static/sass/main.scss */
+.post_view {
+  margin: 30px; }
+
+/* line 102, main_app/static/sass/main.scss */
+.add_post {
+  margin-bottom: 30px; }
+  /* line 104, main_app/static/sass/main.scss */
+  .add_post a {
+    color: #27187e; }
+    /* line 106, main_app/static/sass/main.scss */
+    .add_post a :hover {
+      color: #ec0868; }
+  /* line 110, main_app/static/sass/main.scss */
+  .add_post button {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19); }
+
+/* line 115, main_app/static/sass/main.scss */
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  gap: 30px; }
+
+/* line 123, main_app/static/sass/main.scss */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  height: fit-content; }
+
+/* line 134, main_app/static/sass/main.scss */
+.card-body__title {
+  display: flex;
+  justify-content: space-between; }
+  /* line 139, main_app/static/sass/main.scss */
+  .card-body__title a :hover {
+    color: #ec0868 !important; }
+  /* line 144, main_app/static/sass/main.scss */
+  .card-body__title h5 {
+    color: #27187e;
+    margin-bottom: 3px; }
+
+/* line 152, main_app/static/sass/main.scss */
+.card-body__icons #heart {
+  margin-right: 5px;
+  color: #ec0868; }
+  /* line 155, main_app/static/sass/main.scss */
+  .card-body__icons #heart :hover {
+    color: #ec0868; }
+
+/* line 159, main_app/static/sass/main.scss */
+.card-body__icons #comment {
+  color: #27187e; }
+
+/* line 164, main_app/static/sass/main.scss */
+.card-body__flex {
+  display: flex; }
+  /* line 166, main_app/static/sass/main.scss */
+  .card-body__flex i {
+    display: flex;
+    justify-content: right; }
+
+/* line 172, main_app/static/sass/main.scss */
+#card-text {
+  text-align: left;
+  color: #758bfd;
+  margin-bottom: 25px; }
+
+/* line 178, main_app/static/sass/main.scss */
+.card-text__blocks {
+  display: flex;
+  justify-content: space-between; }
+
+/* line 186, main_app/static/sass/main.scss */
+.gender {
+  background-color: #aeb8fe;
+  border-radius: 5px;
+  padding: 10px;
+  height: 60px;
+  width: 80px; }
+  /* line 193, main_app/static/sass/main.scss */
+  .gender h6 {
+    font-size: 12px;
+    color: #758bfd;
+    margin: 0px;
+    padding: 0px; }
+  /* line 199, main_app/static/sass/main.scss */
+  .gender p {
+    color: #f1f2f6;
+    margin: 0px;
+    padding-bottom: 0px; }
+
+/* line 206, main_app/static/sass/main.scss */
+.age {
+  background-color: #aeb8fe;
+  border-radius: 5px;
+  padding: 10px;
+  height: 60px;
+  width: 80px; }
+  /* line 213, main_app/static/sass/main.scss */
+  .age h6 {
+    font-size: 12px;
+    color: #758bfd;
+    margin: 0px;
+    padding: 0px; }
+  /* line 219, main_app/static/sass/main.scss */
+  .age p {
+    color: #f1f2f6;
+    margin: 0px;
+    padding-bottom: 0px; }
+
+/* line 226, main_app/static/sass/main.scss */
+.size {
+  background-color: #aeb8fe;
+  border-radius: 5px;
+  padding: 10px;
+  height: 60px;
+  width: 80px; }
+  /* line 233, main_app/static/sass/main.scss */
+  .size h6 {
+    font-size: 12px;
+    color: #758bfd;
+    margin: 0px;
+    padding: 0px; }
+  /* line 239, main_app/static/sass/main.scss */
+  .size p {
+    color: #f1f2f6;
+    margin: 0px;
+    padding-bottom: 0px; }
+
+/* line 249, main_app/static/sass/main.scss */
+.carousel-item img {
+  height: 500px;
+  overflow: hidden; }
+
+/* line 256, main_app/static/sass/main.scss */
+.container__details h1 {
+  margin-top: 20px;
+  color: #27187e; }
+
+/* line 260, main_app/static/sass/main.scss */
+.container__details h4 {
+  font-size: 1em;
+  color: #758bfd; }
+
+/* line 266, main_app/static/sass/main.scss */
+.about__blocks {
+  margin-top: 30px;
+  background-color: #aeb8fe;
+  border-radius: 5px; }
+  /* line 271, main_app/static/sass/main.scss */
+  .about__blocks h5 {
+    color: #27187e;
+    margin-top: 10px;
+    text-align: center; }
+  /* line 277, main_app/static/sass/main.scss */
+  .about__blocks p {
+    text-align: center;
+    color: #f1f2f6; }
+
+/* line 284, main_app/static/sass/main.scss */
+.container_more_details h2 {
+  margin-top: 30px; }
+
+/* line 287, main_app/static/sass/main.scss */
+.container_more_details h3 {
+  font-size: 1.25em; }
+
+/* line 293, main_app/static/sass/main.scss */
+.container__bio h2 {
+  margin: 30px 0 10px 0; }
+
+/* line 298, main_app/static/sass/main.scss */
+.container__details__edit {
+  text-align: center;
+  margin-top: 30px; }
+
+/* line 305, main_app/static/sass/main.scss */
+.profile_img {
+  height: 200px;
+  overflow: hidden; }
+
+/* line 310, main_app/static/sass/main.scss */
+.profile_header {
+  display: flex;
+  margin: 30px; }
+  /* line 314, main_app/static/sass/main.scss */
+  .profile_header h1 {
+    margin-left: 15px;
+    color: #27187e; }
+  /* line 319, main_app/static/sass/main.scss */
+  .profile_header h3 {
+    margin-left: 15px;
+    color: #758bfd;
+    font-size: 1em; }
+  /* line 325, main_app/static/sass/main.scss */
+  .profile_header img {
+    border-radius: 10px; }
+  /* line 329, main_app/static/sass/main.scss */
+  .profile_header button {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+    margin: 15px; }
+
+/* line 335, main_app/static/sass/main.scss */
+.profile_info {
+  margin-left: 30px;
+  margin-bottom: 30px; }
+  /* line 338, main_app/static/sass/main.scss */
+  .profile_info h3 {
+    color: #27187e; }
+  /* line 341, main_app/static/sass/main.scss */
+  .profile_info p {
+    color: #758bfd;
+    text-align: justify;
+    max-width: fit-content;
+    margin-right: 30px; }

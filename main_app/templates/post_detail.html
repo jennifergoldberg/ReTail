@@ -35,10 +35,6 @@
       <h1>{{post.dog_name}}</h1>
       <h4>{{post.breed}}</h4>
     </div>
-    <div class="container__details__edit">
-      <a href="{% url 'post_update' post.pk %}">Update</a>
-      <a href="{% url 'post_delete' post.pk %}">Delete</a>
-    </div>
   </div>
 
   <div class="container__about">
@@ -89,7 +85,14 @@
   </div>
 </div>
 
-
+<div class="container__details__edit">
+  <button class="btn btn-light">
+    <a style="text-decoration:none; color:#aeb8fe;" href="{% url 'post_update' post.pk %}">Update</a>
+  </button>
+  <button class="btn btn-light">
+    <a style="text-decoration:none; color:#aeb8fe;" href="{% url 'post_delete' post.pk %}">Remove</a>
+  </button>
+</div>
 
 
 {% endblock content %}
