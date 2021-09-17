@@ -1,0 +1,275 @@
+/* line 5, main_app/static/sass/_components.scss */
+footer {
+  background-color: #272d2d;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 50px;
+  width: 100%; }
+
+/* line 4, main_app/static/sass/main.scss */
+body {
+  background-color: #f1f2f6; }
+
+/* line 8, main_app/static/sass/main.scss */
+main {
+  background-color: #f1f2f6; }
+  /* line 10, main_app/static/sass/main.scss */
+  main h3 {
+    color: #27187e; }
+  /* line 14, main_app/static/sass/main.scss */
+  main p {
+    color: #758bfd; }
+
+/* line 21, main_app/static/sass/main.scss */
+header img {
+  width: 100vw; }
+
+/* line 27, main_app/static/sass/main.scss */
+nav.img {
+  border-radius: 100px; }
+
+/* line 32, main_app/static/sass/main.scss */
+.login_container {
+  display: flex; }
+
+/* line 35, main_app/static/sass/main.scss */
+.login_image img {
+  height: 100vh; }
+
+/* line 39, main_app/static/sass/main.scss */
+.login_form {
+  width: 30vw; }
+
+/* line 43, main_app/static/sass/main.scss */
+#login_header {
+  color: #27187e;
+  margin-left: 30px; }
+
+/* line 48, main_app/static/sass/main.scss */
+.login {
+  text-align: center; }
+  /* line 51, main_app/static/sass/main.scss */
+  .login h1 {
+    color: #27187e;
+    margin: 30px; }
+  /* line 55, main_app/static/sass/main.scss */
+  .login h2 {
+    color: #27187e; }
+
+/* line 60, main_app/static/sass/main.scss */
+.login__options {
+  margin: 0 5px;
+  color: #27187e; }
+
+/* line 66, main_app/static/sass/main.scss */
+.login__exists__options {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; }
+  /* line 71, main_app/static/sass/main.scss */
+  .login__exists__options a {
+    color: #aeb8fe; }
+    /* line 73, main_app/static/sass/main.scss */
+    .login__exists__options a ::hover {
+      color: #27187e; }
+
+/* line 81, main_app/static/sass/main.scss */
+.signup_container {
+  display: flex; }
+
+/* line 88, main_app/static/sass/main.scss */
+.post_view {
+  margin: 30px; }
+
+/* line 92, main_app/static/sass/main.scss */
+.add_post {
+  margin-bottom: 30px; }
+  /* line 94, main_app/static/sass/main.scss */
+  .add_post a {
+    color: #27187e; }
+    /* line 96, main_app/static/sass/main.scss */
+    .add_post a :hover {
+      color: #ec0868; }
+  /* line 100, main_app/static/sass/main.scss */
+  .add_post button {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19); }
+
+/* line 105, main_app/static/sass/main.scss */
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  gap: 30px; }
+
+/* line 113, main_app/static/sass/main.scss */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  height: fit-content; }
+
+/* line 124, main_app/static/sass/main.scss */
+.card-body__title {
+  display: flex;
+  justify-content: space-between; }
+  /* line 129, main_app/static/sass/main.scss */
+  .card-body__title a :hover {
+    color: #ec0868 !important; }
+  /* line 134, main_app/static/sass/main.scss */
+  .card-body__title h5 {
+    color: #27187e;
+    margin-bottom: 3px; }
+
+/* line 142, main_app/static/sass/main.scss */
+.card-body__icons #heart {
+  margin-right: 5px;
+  color: #ec0868; }
+  /* line 145, main_app/static/sass/main.scss */
+  .card-body__icons #heart :hover {
+    color: #ec0868; }
+
+/* line 149, main_app/static/sass/main.scss */
+.card-body__icons #comment {
+  color: #27187e; }
+
+/* line 154, main_app/static/sass/main.scss */
+.card-body__flex {
+  display: flex; }
+  /* line 156, main_app/static/sass/main.scss */
+  .card-body__flex i {
+    display: flex;
+    justify-content: right; }
+
+/* line 162, main_app/static/sass/main.scss */
+#card-text {
+  text-align: left;
+  color: #758bfd;
+  margin-bottom: 25px; }
+
+/* line 168, main_app/static/sass/main.scss */
+.card-text__blocks {
+  display: flex;
+  justify-content: space-between; }
+
+/* line 176, main_app/static/sass/main.scss */
+.gender {
+  background-color: #aeb8fe;
+  border-radius: 5px;
+  padding: 10px;
+  height: 60px;
+  width: 80px; }
+  /* line 183, main_app/static/sass/main.scss */
+  .gender h6 {
+    font-size: 12px;
+    color: #758bfd;
+    margin: 0px;
+    padding: 0px; }
+  /* line 189, main_app/static/sass/main.scss */
+  .gender p {
+    color: #f1f2f6;
+    margin: 0px;
+    padding-bottom: 0px; }
+
+/* line 196, main_app/static/sass/main.scss */
+.age {
+  background-color: #aeb8fe;
+  border-radius: 5px;
+  padding: 10px;
+  height: 60px;
+  width: 80px; }
+  /* line 203, main_app/static/sass/main.scss */
+  .age h6 {
+    font-size: 12px;
+    color: #758bfd;
+    margin: 0px;
+    padding: 0px; }
+  /* line 209, main_app/static/sass/main.scss */
+  .age p {
+    color: #f1f2f6;
+    margin: 0px;
+    padding-bottom: 0px; }
+
+/* line 216, main_app/static/sass/main.scss */
+.size {
+  background-color: #aeb8fe;
+  border-radius: 5px;
+  padding: 10px;
+  height: 60px;
+  width: 80px; }
+  /* line 223, main_app/static/sass/main.scss */
+  .size h6 {
+    font-size: 12px;
+    color: #758bfd;
+    margin: 0px;
+    padding: 0px; }
+  /* line 229, main_app/static/sass/main.scss */
+  .size p {
+    color: #f1f2f6;
+    margin: 0px;
+    padding-bottom: 0px; }
+
+/* line 239, main_app/static/sass/main.scss */
+.carousel-item img {
+  height: 500px;
+  overflow: hidden; }
+
+/* line 246, main_app/static/sass/main.scss */
+.container__details h1 {
+  margin-top: 20px;
+  color: #27187e; }
+
+/* line 250, main_app/static/sass/main.scss */
+.container__details h4 {
+  font-size: 1em;
+  color: #758bfd; }
+
+/* line 256, main_app/static/sass/main.scss */
+.about__blocks {
+  margin-top: 30px;
+  background-color: #aeb8fe;
+  border-radius: 5px; }
+  /* line 261, main_app/static/sass/main.scss */
+  .about__blocks h5 {
+    color: #27187e;
+    margin-top: 10px;
+    text-align: center; }
+  /* line 267, main_app/static/sass/main.scss */
+  .about__blocks p {
+    text-align: center;
+    color: #f1f2f6; }
+
+/* line 274, main_app/static/sass/main.scss */
+.container_more_details h2 {
+  margin-top: 30px; }
+
+/* line 277, main_app/static/sass/main.scss */
+.container_more_details h3 {
+  font-size: 1.25em; }
+
+/* line 283, main_app/static/sass/main.scss */
+.container__bio h2 {
+  margin: 30px 0 10px 0; }
+
+/* line 290, main_app/static/sass/main.scss */
+.profile_img {
+  height: 200px;
+  overflow: hidden; }
+
+/* line 295, main_app/static/sass/main.scss */
+.profile_header {
+  display: flex;
+  margin: 30px; }
+  /* line 299, main_app/static/sass/main.scss */
+  .profile_header h1, .profile_header h3 {
+    margin-left: 15px; }
+  /* line 303, main_app/static/sass/main.scss */
+  .profile_header img {
+    border-radius: 10px; }
+  /* line 307, main_app/static/sass/main.scss */
+  .profile_header button {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+    margin: 15px; }
+
+/* line 313, main_app/static/sass/main.scss */
+.profile_info {
+  margin-left: 15px; }

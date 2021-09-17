@@ -287,6 +287,43 @@ nav.img {
 
 // Profile Detail Page
 
+.profile_img {
+  height: 200px;
+  overflow: hidden;
+}
+
 .profile_header {
   display: flex;
+  margin: 30px;
+
+  h1 {
+    margin-left: 15px;
+    color: $color-primary;
+  }
+
+  h3 {
+    margin-left: 15px;
+    color: $color-secondary;
+    font-size: 1em;
+  }
+
+  img {
+    border-radius: 10px;
+  }
+
+  button {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+    margin: 15px;
+  }
+}
+
+.profile_info {
+  margin-left: 30px;
+  margin-bottom: 30px;
+  h3 {
+    color: $color-primary;
+  }
+  p {
+    color: $color-secondary;
+  }
 }
