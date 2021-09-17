@@ -6,7 +6,6 @@
 {% block content %}
 
 
-<h1>signup</h1>
 {% comment %} <form action="{% url 'signup' %}" method="POST">
     {% csrf_token %}
     {{ signup_user_form }}
@@ -14,64 +13,31 @@
     <input type="submit" value="Sign Up">
 </form> {% endcomment %}
 
-{% if signup_user_form.errors or signup_profile_form.errors %}
-    <h3 class="alert alert-danger"> {{signup_user_form.errors}} {{signup_profile_form.errors}} </h3>
-{% endif %}
+<div class="signup_container">
+  <div class="signup_container__img">
+    <img src="/static/assets/flouffy-qEO5MpLyOks-unsplash.jpg" alt="dog with glasses" height="700px">
+  </div>
 
-<div class="mt-5" style="margin:auto; padding:30px; width:500px">
-    <form action="{% url 'signup' %}" method="POST">
-        <div class="mt-3 mb-3 d-flex align-items-left flex-column" id="title">
-            <input type="hidden" name="form_name" value="login_form"> 
-        {% csrf_token %}
-        {{ signup_user_form }}
-        {{ signup_profile_form }}
-        <input type="submit" value="Sign Up">
+  <div class="signup_container__form">
+    <h1>Sign Up</h1>
+    {% if signup_user_form.errors or signup_profile_form.errors %}
+        <h3 class="alert alert-danger"> {{signup_user_form.errors}} {{signup_profile_form.errors}} </h3>
+    {% endif %}
 
-    </form>
+    <div class="mt-2" style="margin:auto; padding:30px;">
+        <form action="{% url 'signup' %}" method="POST">
+            <div class="mt-3 mb-3 d-flex align-items-left flex-column" id="title">
+                <input type="hidden" name="form_name" value="login_form"> 
+            {% csrf_token %}
+            {{ signup_user_form }}
+            {{ signup_profile_form }}
+            <input class="btn" type="submit" value="Sign Up" style="width:100px;background-color:#27187e;color:#f1f2f6">
+
+        </form>
+    </div>
+  </div>
+
 </div>
-
-{% comment %} {% if signup_form.errors or profile_form.errors %}
-    <h5 class="alert alert-danger">{{signup_form.errors}} {{profile_form.errors}} </h5>
-  {% endif %}
-    <div class="mt-5" style="width:600px;margin:auto;border:3px solid #B0F3EC;border-radius:5px" id="post-card">
-          <form method="POST" action="{% url 'signup' %}">
-            <div class="mt-3 mb-3 d-flex align-items-center flex-column" id="title">
-                <input type="hidden" name="form_name" value="login_form">  
-                  {% csrf_token %}
-                <div class="input-group mb-3 px-3">
-                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-user-circle"></span>
-                  {{ signup_form.username|add_class:"form-control"|attr:"placeholder:Username"}}
-                </div>
-                <div class="input-group mb-3 px-3">
-                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
-                  {{ signup_form.password1|add_class:"form-control"|attr:"placeholder:Password" }}
-                </div>
-                <div class="input-group mb-3 px-3">
-                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
-                  {{ signup_form.password2|add_class:"form-control"|attr:"placeholder:Confirm Password" }}
-                </div>
-                <div class="input-group mb-3 px-3">
-                  <span class="input-group-text dropdown-toggle" id="basic-addon1"><i class="fas fa-city"></i></span>
-                  <select class="form-control" name="current_city" required="" id="id_current_city form_two">
-                    <option value selected>Select Favorite City</option>
-                    <option value="1">San Francisco</option>
-                    <option value="2">Gibraltar</option>
-                    <option value="3">London</option>
-                    <option value="4">Paris</option>
-                    <option value="5">Hong Kong</option>
-                    <option value="6">Dubai</option>
-                    <option value="7">New York City</option>
-                  </select>
-                </div>
-                <div class="input-group mb-3 px-3">
-                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-user-tie"></i></span>
-                  {{ profile_form.avatar|add_class:"form-control"|attr:"placeholder:Avatar Image Link"}}
-                </div>
-                <input class="btn px-3 py-1" type="submit" value="Sign Up" id="ok-btn">    
-            </div>
-          </form>
-    </div> {% endcomment %}
-
 
 
 {% endblock %}

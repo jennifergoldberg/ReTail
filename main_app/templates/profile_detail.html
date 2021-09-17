@@ -1,21 +1,75 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="profile_img">
+  <img src="/static/assets/okeykat-w6elADh_jww-unsplash.jpg" alt="" width="100%">
+</div>
+
+<div class="profile">
 <div class="profile_header">
-  <img src="{{ user.profile.avatar }}" alt="avatar" width="150px">
+  <img src="{{ user.profile.avatar }}" alt="avatar" width="150px" height="150px">
   <div class="profile_header__details">
     <h1>{{ user.username }}</h1>
     <h3>{{ user.profile.location }}</h3>
-    <a href="{% url 'profile_update' user.profile.pk %}"><i class="fas fa-cog"></i></a>
+    <button class="btn btn-light">
+      <a style="text-decoration:none; color:#758bfd" href="{% url 'profile_update' user.profile.pk %}"><i class="fas fa-cog"></i> Update</a>
+    </button>
   </div>
 </div>
-<h3>{{ user.profile.org_name }}</h3>
-<p>{{ user.profile.bio }}</p>
 
-{% for post in user.posts.all %}
-<p>{{ post.dog_name }}</p>
+<div class="profile_info">
+  <h3>{{ user.profile.org_name }}</h3>
+  <p>{{ user.profile.bio }}</p>
+</div>
 
-{% endfor %}
+<hr>
 
+<div class="add_post" style="margin-left:30px;">
+  <button class="btn btn-light">
+    <a href="{% url 'post_create' %}" style="text-decoration:none;"> <i class="fas fa-paw"></i> Add Post</a> 
+  </button>
+</div>
+
+</div>
+
+<div class="card_container" style="margin-left:30px;">
+  {% for post in posts %}
+  <div class="card" style="width: 18rem;">
+    <a href="{% url 'post_detail' post.pk %}">
+    <img src="{{ post.image }}" class="card-img-top" alt="...">
+    </a>
+    <div class="card-body">
+      <div class="card-body__title">
+      <a href="{% url 'post_detail' post.pk %}" style="text-decoration:none;">
+        <h5 class="card-title">{{ post.dog_name }}</h5>
+      </a>
+        <div class="card-body__icons">
+          <i id="heart" class="far fa-heart"></i>
+          <i id="comment" class="far fa-comment-alt"></i>
+        </div>
+      </div>
+      <p id="card-text"> {{ post.breed }} </p>
+      <div class="card-text__blocks">
+        <div class="gender">
+          <h6>Gender</h6>
+          <p>{{ post.gender }}</p>
+        </div>
+        <div class="age">
+          <h6>Age</h6>
+          <p>{{ post.age }}</p>
+        </div>
+        <div class="size">
+          <h6>Size</h6>
+          <p>{{ post.size }} lbs </p>
+        </div>
+      </div>
+      {% comment %} <a href="{% url 'post_detail' post.pk %}" class="btn btn-dark mt-3">Go somewhere</a> {% endcomment %}
+    </div>
+    
+  </div>
+    {% endfor %}
+</div>
+
+</div>
 
 {% endblock content %}
