@@ -24,10 +24,11 @@
 
 <hr>
 
-{% comment %} {% for post in posts %}
-<p>{{ post.dog_name }}</p>
-
-{% endfor %} {% endcomment %}
+<div class="add_post" style="margin-left:30px;">
+  <button class="btn btn-light">
+    <a href="{% url 'post_create' %}" style="text-decoration:none;"> <i class="fas fa-paw"></i> Add Post</a> 
+  </button>
+</div>
 
 </div>
 
